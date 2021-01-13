@@ -32,7 +32,7 @@ X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 """
 
-# Crear modelo de Regresión Lienal Simple con el conjunto de entrenamiento
+# Crear modelo de Regresión Lienal Simple con el conjunto de entrenamiento -- no requiere ser escalada
 from sklearn.linear_model import LinearRegression
 regression = LinearRegression()
 regression.fit(X_train, y_train)
@@ -41,7 +41,7 @@ regression.fit(X_train, y_train)
 y_pred = regression.predict(X_test)
 
 # Visualizar los resultados de entrenamiento
-plt.scatter(X_train, y_train, color = "red")
+plt.scatter(X_train, y_train, color = "red") #nube de puntos
 plt.plot(X_train, regression.predict(X_train), color = "blue")
 plt.title("Sueldo vs Años de Experiencia (Conjunto de Entrenamiento)")
 plt.xlabel("Años de Experiencia")
